@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Gabriel Lopes Aguiar - Página Pessoal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Syne', sans-serif;
+            background-color: #f4f4f9;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .list-group-item {
+            background-color: #fff;
+            color: #000;
+        }
+        .hero {
+            padding: 50px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+        .content-section {
+            padding: 40px 0;
+        }
+        /* Modo Escuro */
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode .list-group-item {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        .toggle-dark-mode {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        /* Botão Voltar ao Topo */
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        /* Barra de Proficiência */
+        .progress-bar {
+            background-color: #007bff;
+        }
+        /* Microinterações */
+        .social-icons a {
+            margin: 0 10px;
+            color: #007bff;
+            transition: transform 0.2s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão de Modo Escuro -->
+    <div class="toggle-dark-mode" onclick="toggleDarkMode()">Modo Escuro</div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>João Gabriel Lopes Aguiar</h1>
+        <p>Estagiário | Desenvolvimento Full Stack | Ciência de Dados</p>
+        <p>Email: joaogabriellops2353@gmail.com</p>
+        <!-- Botão de Download do Currículo -->
+        <button onclick="downloadResume()" class="btn btn-light mt-3">Baixar Currículo</button>
+    </header>
+
+    <!-- Social Media Links -->
+    <div class="text-center social-icons mt-3">
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-lopes-aguiar-773827244/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JoaoLops3" target="_blank">GitHub</a>
+    </div>
+
+    <!-- About Section -->
+    <div class="container content-section">
+        <h2 class="text-center">Sobre Mim</h2>
+        <p>Olá! Sou João Gabriel Lopes Aguiar, estagiário e estudante de Engenharia da Computação. Tive a oportunidade de trabalhar por quatro meses no Centro de Inovação Brain da IP Facens, onde desenvolvi minhas habilidades em um ambiente colaborativo e dinâmico. Essa experiência me permitiu aprender com profissionais talentosos e explorar diversas áreas da tecnologia. Tenho uma paixão especial por front-end, onde busco criar interfaces envolventes e funcionais. Estou sempre em busca de novos desafios que me permitam expandir meu conhecimento e contribuir para soluções inovadoras.</p>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="container content-section">
+        <h2 class="text-center">Experiência Profissional</h2>
+        <h3 class="text-center">Brain IP Facens</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>Projeto Titanic no Kaggle:</strong> Desenvolvi um modelo preditivo para avaliar a sobrevivência de passageiros do Titanic utilizando algoritmos de classificação. Através de análise exploratória de dados e técnicas de pré-processamento, explorei variáveis como idade, classe e gênero, culminando em um modelo que aprimorou a precisão da previsão.
+            </li>
+            <li class="list-group-item">
+                <strong>Projeto Palm Oil Kaggle:</strong> Realizei uma análise abrangente dos dados relacionados à produção de óleo de palma, focando em práticas sustentáveis e seu impacto ambiental. Utilizei visualizações de dados e análise estatística para identificar tendências e propor soluções que abordem os desafios associados à produção deste recurso.
+            </li>
+            <li class="list-group-item">
+                <strong>California Housing Prices Kaggle:</strong> Desenvolvi modelos de regressão para prever os preços de imóveis na Califórnia. Através da análise de dados, identifiquei fatores que influenciam os preços, como localização, tamanho e características da propriedade, resultando em insights valiosos para entender o mercado imobiliário local.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Competências Section com Barras de Proficiência -->
+    <div class="container content-section">
+        <h2 class="text-center">Competências</h2>
+        <div class="mb-3">
+            <p>Python</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <p>HTML5/CSS & JavaScript</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <p>Java</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <p>Análise de dados</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <p>Machine Learning</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <p>Arduino</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center mt-5 py-4">
+        <p>&copy; 2024 João Gabriel Lopes Aguiar - Todos os Direitos Reservados</p>
+    </footer>
+
+    <!-- Botão de Voltar ao Topo -->
+    <div class="back-to-top" onclick="scrollToTop()">↑</div>
+
+    <!-- JavaScript para funcionalidades dinâmicas -->
+    <script>
+        // Modo Escuro
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Botão Voltar ao Topo
+        window.onscroll = function() {
+            var backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Download do Currículo
+        function downloadResume() {
+            window.open('curriculo.pdf', '_blank');
+        }
+    </script>
+
+</body>
+</html>
